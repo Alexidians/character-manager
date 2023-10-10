@@ -1,0 +1,18 @@
+<input width="100%" id="input"></input>
+<button onclick="runCharCodeAt()">CharCodeAt</button>
+<button onclick="runFromCharCode()">FromCharCode</button>
+<p id="value"></p>
+<script>
+function runCharCodeAt() {
+  var array = document.getElementById("input").value.split("")
+  var secretifiedCode = array[0].charCodeAt()
+for (let i = 1; i < array.length; i++) {
+  secretifiedCode = secretifiedCode + ", " + array[i].charCodeAt()
+}
+  document.getElementById("value").innerHTML = secretifiedCode
+}
+
+function runFromCharCode() {
+ document.getElementById("value").innerHTML = String.fromCharCode(parseInt(document.getElementById("input").value))
+}
+</script>
